@@ -1,0 +1,13 @@
+#creature-form {
+    background: #e6fdff;
+    padding: 20px;
+    margin: 50px;
+}
+
+#creature-list {
+    background: rgb(135, 255, 201);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px;
+}
