@@ -1,13 +1,28 @@
-#creature-form {
-    background: #e6fdff;
+.creature-form  {
+    background: #abbabc;
     padding: 20px;
     margin: 50px;
 }
 
-#creature-list {
-    background: rgb(135, 255, 201);
+.creature-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 50px;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.creature-body {
+    background: pink;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+.eye { 
+    height: 18px; 
+    width: 10px; 
+    border: 2px solid #000; 
+    border-radius: 10px; 
+    background: #fff;
 }

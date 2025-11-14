@@ -6,7 +6,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- Overall title of your page -->
-   <title>Empty Template</title>
+   <title>Creeature Garden</title>
    <!-- Link to external CSS file -->
    <link rel="stylesheet" href="creature.css">
    <!-- jQuery library -->
@@ -19,15 +19,21 @@
    <h1> CREATURES GARDEN </h1>
 
     <!---creature-->
-    <div id="creature-form">
+    <div class="creature-form">
+
         <h2> Add a creature </h2>
-        <input id="crName" type="text">
-        <button id="add-creature"> Let it roam!</button>
+
+        <div>Name:<input class="crName" type="text" maxlength="10"></div>
+        <div>Color: <input class="crColor" type="color"></div>
+        <div> Number of Eyes: <input class="crEyesNum" type="number" max="5" min="0"></div>
+        <button class="add-creature"> Let it roam!</button>
+
     </div>
-    
+    In the garden, there lived...
     <!--outputting creatures-->
-    <div id="creature-list">
-    In the garden, there lived 
+    <div class="creature-list">
+    
+
     </div>
 
 
