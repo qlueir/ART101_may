@@ -1,0 +1,99 @@
+#guppy {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+#fish_tank{
+    display: none;
+    
+}
+#cat {
+    margin: 20px;
+    width: 300px; 
+    height: fit-content;
+}
+
+
+#fishgun {
+    margin: 20px;
+    width: 200px;
+}
+
+
+#vert{display: none;}
+#explodingcat {display:none}
+
+h3 {
+   background-color: lightblue;
+   padding: 20px;
+   border: 20px;
+   text-shadow: 20px;
+   text-align: center;
+   outline: 20px;
+}
+
+body {
+    font-size: large;
+}
+
+.page1 {
+    background-image: url(notebook\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 30px;
+    padding-left: 10%;
+    margin: 30px;
+    max-width: fit-content;
+    height: auto;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: black;
+}
+
+
+.page2 {
+    background-image: url(notebook\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 30px;
+    padding-left: 10%;
+    margin: 30px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: black;
+}
+
+.bothpages {
+    display: flex;
+}
+
+.fishtank {
+    background-image: url(Insaniaquarium\ tank.webp);
+    background-repeat: no-repeat;
+    padding: 30px;
+    margin: 30px;
+    width: auto;
+    height: 300px;
+
+}
+
+.highlighted-text{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    
+}
+
+.ending {
+    font-weight: 100;
+}
+
+.decision {
+    border-radius: 3px;
+    border-style: solid;
+    border-color: black;
+}
+
+details {cursor: pointer;}
+button {cursor: pointer;}
+strong { font-weight: bold;}
