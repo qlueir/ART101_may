@@ -94,7 +94,7 @@ $("#add-creature").click(
     });
 
 $("#shuffle-creatures").click(
-function (){
-  renderAllCreaturesRandom();
+    function (){
+    renderAllCreaturesRandom();
 
 });

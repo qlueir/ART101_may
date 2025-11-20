@@ -1,16 +1,16 @@
-.creature-form  {
+#creature-form  {
     background: #abbabc;
     padding: 20px;
     margin: 50px;
 }
 
-.creature-list {
+#crName {
     display: flex;
     flex-direction: row;
     padding: 50px;
 }
 
-.creature-body {
+#crColor {
     background: pink;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
     height: 100px;
 }
 
-.eye { 
+#crEyesNum { 
     height: 18px; 
     width: 10px; 
     border: 2px solid #000; 
