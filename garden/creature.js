@@ -1,27 +1,44 @@
 // memorize all creatures in array
-
 let allCreatures = [];
 
-// main add click handler
-  // create creature object based on form inputs
-  // safety check-ups
-  // prepare an html for a single creature
- 
-  // print single creature on a page
-  // add the creature to the memory
-  // reset the from
+// random name api
+async function getRandomName() {
 
-function getCreatureFromForm(){ 
+   const response = await fetch(
+"https://api.gofakeit.com/funcs/petname", 
+{method: "GET",});
 
-    const freshCreature={
-    name: $("#crName").val(),
-    color: $("#crColor").val(),
-    eyesNum: $("#crEyesNum").val()
-    };
+   const nameRandom = await response.text();
+   console.log("Got name:", nameRandom);
+   return nameRandom;
+}
 
-    return freshCreature;
+// random color
+async function getRandomColor() {
+  const response = await fetch( "https://api.gofakeit.com/funcs/hexcolor",
+  {method: "GET",});
 
-};
+  const eyesRandom = await response.text();
+  console.log("Got color:", eyesRandom);
+  return eyesRandom;
+}
+
+// random creature
+async function randomizeCreature() {
+
+   const eyesRandom = Math.floor(Math.random() * 5) + 1;
+   const nameRandom = await getRandomName();
+   const colorRandom = "grey";
+
+   const randomCreature = {
+       name: nameRandom,
+       color: colorRandom,
+       eyesNum: eyesRandom
+   };
+
+   return randomCreature;
+}
+
 
 // prepare HTML for a single creature (does NOT add to the page)
 function renderCreature(creature) {
@@ -45,8 +62,9 @@ ${crEyesHTML}
 
 // append one creature to the DOM using its HTML
 function addCreatureToDOM(creature) {
-  const html = renderCreature(creature);
+  html = renderCreature(creature);
   $("#creature-list").append(html);
+
 }
 
 // check if creature data is valid
@@ -63,24 +81,22 @@ function clearForm() {
   $("#crColor").val("#ee7dea");  // or keep previous if you prefer
   $("#crEyesNum").val(1);
 }
-// render all creatures in random order (uses the creatures array)
-function renderAllCreaturesRandom() {
-  $("#creature-list").empty();
 
-  const shuffled = allCreatures.slice().sort(() => Math.random() - 0.5);
 
-  shuffled.forEach(function (c, i) {
-    const $creature = $(renderCreature(c)).hide(); 
-    $("#creature-list").append($creature);
-    $creature.delay(i * 120).fadeIn(300);  
-  });
-}
+
+// BUTTON HANDLERS
 
 $("#add-creature").click(
-    function () {
+    async function () {
 
-    // create creature object based on form inputs
-    const newCreature = getCreatureFromForm();
+ 
+    let newCreature;
+
+   // choose the source for a creature
+    if( $("#crRandom").is(':checked') ) 
+    { newCreature= await randomizeCreature();}
+    else 
+    { newCreature= getCreatureFromForm(); }
 
     // do checks, exit function if something is wrong
    if ( isCreatureValid(newCreature)==false) {
@@ -93,8 +109,6 @@ $("#add-creature").click(
 
     });
 
-$("#shuffle-creatures").click(
-    function (){
-    renderAllCreaturesRandom();
 
-});
+
+//wanderAllCreatures(); // wander them
