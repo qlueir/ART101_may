@@ -15,8 +15,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 100px;
-    height: 100px;
 }
 
 #crEyesNum { 
@@ -26,3 +24,11 @@
     border-radius: 10px; 
     background: #fff;
 }
+
+#crRandom
+#add-creature
+#creature-list
+.creature-info
+.creature-body
+.creature
+.eye

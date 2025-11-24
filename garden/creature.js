@@ -4,18 +4,19 @@ let allCreatures = [];
 // random name api
 async function getRandomName() {
 
-   const response = await fetch(
-"https://api.gofakeit.com/funcs/petname", 
-{method: "GET",});
+  const response = await fetch(
+  "https://api.gofakeit.com/funcs/petname", 
+  {method: "GET",});
 
    const nameRandom = await response.text();
    console.log("Got name:", nameRandom);
    return nameRandom;
 }
 
-// random color
+// random color api
 async function getRandomColor() {
-  const response = await fetch( "https://api.gofakeit.com/funcs/hexcolor",
+  const response = await fetch(
+  "https://api.gofakeit.com/funcs/hexcolor",
   {method: "GET",});
 
   const eyesRandom = await response.text();
