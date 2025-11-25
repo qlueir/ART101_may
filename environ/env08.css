@@ -14,12 +14,10 @@
     height: fit-content;
 }
 
-
 #fishgun {
     margin: 20px;
     width: 200px;
 }
-
 
 #vert{display: none;}
 #explodingcat {display:none}
@@ -50,7 +48,6 @@ body {
     border-style: solid;
     border-color: black;
 }
-
 
 .page2 {
     background-image: url(notebook\ background.jpg);

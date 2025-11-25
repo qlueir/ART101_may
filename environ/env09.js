@@ -47,7 +47,7 @@ $(document).ready()
     });
 
 
-    //hover on peephole image transform into cat image and show text DOESNT WORK :(
+    //hover on peephole image transform into cat image + yippe sound
     
     $(".peeping").hover(function() {
         $('#peephole').attr('src', 'images/cat_point5.jpg');
@@ -76,5 +76,3 @@ $(document).ready()
     requestAnimationFrame(bounce);
     }
     bounce();
-
-    

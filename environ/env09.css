@@ -4,9 +4,8 @@
     margin: 20px;
 }
 
-#fish_tank{
+#fish_tank, #notebook, #vert, #explodingcat{
     display: none;
-    
 }
 #peephole{
     margin: 20px;
@@ -26,16 +25,11 @@
     height: fit-content;
 }
 
-
 #shotgun {
     margin: 20px;
     width: 200px;
     pointer-events: none;
 }
-
-#notebook {display: none;}
-#vert{display: none;}
-#explodingcat {display:none}
 
 h3 {
    background-color: lightblue;
@@ -50,21 +44,7 @@ body {
     font-size: large;
 }
 
-.page1 {
-    background-image: url(notebook-background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 30px;
-    padding-left: 10%;
-    margin: 30px;
-    height: auto;
-    border-radius: 3px;
-    border-style: solid;
-    border-color: black;
-}
-
-
-.page2 {
+.page1, .page2 {
     background-image: url(notebook-background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -105,13 +85,11 @@ body {
 
 }
 
-
 .decision {
     border-radius: 3px;
     border-style: solid;
     border-color: black;
 }
 
-details {cursor: pointer;}
-button {cursor: pointer;}
+details, button {cursor: pointer;}
 strong { font-weight: bold;}
